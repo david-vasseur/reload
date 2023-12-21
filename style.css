@@ -1,0 +1,224 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "White Rabbit";
+    src: url("/font/white-rabbit-regular.ttf") format("TrueType");
+    
+}
+
+/* ---- CANVAS ---- */
+
+.canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* ---- PAGE INDEX ---- */
+
+.titre {
+    font-family: "White Rabbit";
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.466);
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    width: 280px;
+    height: 280px;
+    text-align: center;
+    align-items: center;
+    color: rgb(11, 136, 0);
+    font-size: 30px;
+    border-radius: 50%;
+    backdrop-filter: blur(2px);
+    transition: 0.5s;
+    border: 5px, solid, blanchedalmond;
+    text-decoration: none;
+    align-items: flex-end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.btn1, .btn2 {
+    position: relative;
+    top: -40%;
+    display: flex;
+    padding: 0;
+    
+}
+
+.titre:hover {
+    color: blanchedalmond;
+    background-color: rgba(240, 248, 255, 0.089);
+    border: solid, 2px, blanchedalmond;
+    cursor: pointer;
+    scale: 1.15;
+}
+
+.btn2 {
+   animation-name: blink;
+   animation-duration: 1s;
+   animation-iteration-count: infinite;
+   left: -10%;
+   
+}
+
+@keyframes blink {
+
+    from {
+        opacity: 1;
+        color: rgb(11, 136, 0);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.2;
+        color: blanchedalmond;
+    }
+    
+}
+
+/* ---- NAV BAR ---- */
+
+.nav {
+    position: fixed;
+    left: 10%;
+    display: flex;
+    margin: 60px auto;
+    width: 80%;
+    justify-content: space-between;
+    z-index: 2;
+    top: 0;
+}
+
+.navbtn {
+    position: relative;
+    text-decoration: none;
+    padding: 20px;
+    color: blanchedalmond;
+    font-weight: 700;
+    font-size: 20px;
+    transition: 0.8s;
+    background: rgb(125,231,240);
+    background: linear-gradient(20deg, rgba(125,231,240,0.8) 0%, rgba(156,148,148,0.8) 60%, rgba(228,245,247,0.8) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-color: rgba(0, 0, 0, 0.336);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    font-family: "White Rabbit";
+
+}
+
+
+
+.navbtn:hover {
+    background: rgba(0, 236, 0, 0.836);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    scale: 1.2;
+}
+
+
+@media screen and (min-width = 500px) {
+
+    .nav {
+        display: block;
+        scale: 0.5;
+        position: absolute;
+        left: 0;
+        top: 0;
+        justify-content: end;
+    }
+    
+    .navbtn {
+        display: block;
+        position: absolute;
+        padding: 0;
+    }
+}
+
+/* ---- MAIN PAGE ----*/
+
+section {
+    position: relative;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(0.5px);
+    margin-top: 400px;
+}
+
+section h2 {
+    font-size: 60px;
+    color: blanchedalmond;
+    padding: 20px;
+    margin: 180px 40px 40px 40px;
+    background: rgb(125,231,240);
+    background: linear-gradient(20deg, rgba(125,231,240,0.6) 0%, rgba(156,148,148,0.6) 60%, rgba(228,245,247,0.6) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: "White Rabbit";
+}
+
+section p {
+    font-size: 24px;
+    color: rgba(230, 230, 230, 0.808);
+    padding: 15px;
+    margin: auto 15%;
+    text-align: justify;
+    font-family: "White Rabbit";
+    
+}
+
+.sec-1 .animate {
+    scale: 0.8;
+    transition: 1.3s;
+}
+
+.sec-1.show-animate .animate {
+    scale: 1.2;
+}
+
+.sec-2 .animate {
+    scale: 0.8;
+    transition: 1.3s;
+}
+
+.sec-2.show-animate .animate {
+    scale: 1.2;
+}
+
+.sec-3 .animate {
+    scale: 0.8;
+    transition: 1.3s;
+}
+
+.sec-3.show-animate .animate {
+    scale: 1.2;
+}
+
+.sec-4 .animate {
+    scale: 0.8;
+    transition: 1.3s;
+}
+
+.sec-4.show-animate .animate {
+    scale: 1.2;
+}
+
+.sec-5 .animate {
+    scale: 0.8;
+    transition: 0.5s;
+}
+
+.sec-5.show-animate .animate {
+    scale: 1.2;
+}
